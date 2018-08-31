@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     *Funtion image
+     *
+     * One User Have Many Image
+     */
+    public function image()
+    {
+        return $this->hasMany('App\Image','user_id');
+    }
 }

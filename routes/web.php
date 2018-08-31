@@ -23,3 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 | All Router In Admin Cpanel
 */
 Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/image', 'ImageController@getAllInAdmin')->name('manage-image');
