@@ -10,6 +10,10 @@ use Illuminate\Validation\Rule;
 use DB;
 class ImageController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('admin');
+    }
     public function getAllInAdmin()
     {
     	$getImages = Image::latest('id')->paginate(10);

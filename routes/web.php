@@ -33,3 +33,6 @@ Route::get('/admin/image/edit/{id}', 'ImageController@getEditImage')->name('get-
 Route::post('/admin/image/edit/{id}', 'ImageController@postEditImage')->name('post-edit-image');
 
 Route::get('/admin/image/delete/{id}', 'ImageController@deleteImage')->name('delete-image');
+
+Route::get('/admin/user/{id}', 'AdminController@getUser')->name('get-user');
+Route::post('/admin/user/{id}', 'AdminController@postUser')->name('post-user');	
