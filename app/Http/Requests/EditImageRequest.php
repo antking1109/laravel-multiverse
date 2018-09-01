@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AddPostRequest extends FormRequest
+class EditImageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class AddPostRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,16 @@ class AddPostRequest extends FormRequest
     {
         return [
             //
+            'txtTitle'      =>  'required',
+            'txtDes'    =>  'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'txtTitle.required'     =>  'Không được để trống tiêu đề',
+            'txtDes.required'   =>  'Không được để trống nội dung',
         ];
     }
 }
