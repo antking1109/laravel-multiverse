@@ -35,4 +35,7 @@ Route::post('/admin/image/edit/{id}', 'ImageController@postEditImage')->name('po
 Route::get('/admin/image/delete/{id}', 'ImageController@deleteImage')->name('delete-image');
 
 Route::get('/admin/user/{id}', 'AdminController@getUser')->name('get-user');
-Route::post('/admin/user/{id}', 'AdminController@postUser')->name('post-user');	
+Route::post('/admin/user/{id}', 'AdminController@postUser')->name('post-user');
+
+Route::get('/admin/setting', 'AdminController@getSetting')->name('get-setting');
+Route::post('/admin/setting', 'AdminController@postSetting')->name('post-setting');
