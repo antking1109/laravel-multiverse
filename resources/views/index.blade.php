@@ -9,9 +9,7 @@
 	@foreach($images as $image)
 	    <article class="thumb">
 			<a href="{{ asset($image['url']) }}" class="image">
-				<span>
-					<center><img src="{{ asset($image['url']) }}" alt="{{ $image['title'] }}" width="440" height="285" /></center>
-				</span>
+				<img src="{{ asset($image['url']) }}" alt="{{ $image['title'] }}" width="440" height="285" />
 			</a>
 			<h2>{{ $image['title'] }}</h2>
 			<p>{{ $image['des'] }}</p>
