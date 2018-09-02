@@ -41,9 +41,10 @@
 			                	</td>
 			                	<td>{{ $image->created_at }}</td>
 			                	<td>
-			                		<button type="button" class="btn btn-warning btn-rounded waves-light waves-effect w-md"><a href="{{ url('admin/image/edit/'.$image->id) }}"><font color="white">Sửa</font></a></button>
-			                		<button type="button" class="btn btn-danger btn-rounded waves-light waves-effect w-md"><a href="{{ url('admin/image/delete/'.$image->id) }}"><font color="white">Xóa</font></a></button>
-			                		<button type="button" class="btn btn-success btn-rounded waves-light waves-effect w-md"><a href="{{ url('i/'.$image->id) }}"><font color="white">Xem</font></a></button>
+			                		<span class="badge badge-warning badge-pill"><a href="{{ url('admin/image/edit/'.$image->id) }}"><font color="white" size="3px">----Sửa----</font></a></span>
+			                		<span class="badge badge-danger badge-pill"><a href="{{ url('admin/image/delete/'.$image->id) }}"><font color="white" size="3px">----Xóa----</font></a></span>
+			                		<span class="badge badge-success badge-pill"><a href="{{ asset($image->url) }}" target="_blank"><font color="white" size="3px">----Xem----</font></a></span>
+			                		
 			                	</td>
 			                </tr>
 		                @endforeach

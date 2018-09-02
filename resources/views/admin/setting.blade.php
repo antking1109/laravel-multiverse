@@ -74,6 +74,10 @@
                     <label for="userName">LinkedIn</label>
                     <input type="text" name="txtLinkedIn" parsley-trigger="change" required="" placeholder="Enter link LinkedIn" class="form-control" id="userName" value="{{ old('txtLinkedIn', $setting['linkedin'])}}">
                 </div>
+                <div class="form-group">
+                    <label for="userName">Mail (Mail để gửi feedBack)</label>
+                    <input type="text" name="txtMail" parsley-trigger="change" required="" placeholder="Enter link Mail" class="form-control" id="userName" value="{{ old('txtMail', $setting['mail'])}}">
+                </div>
                 <div class="form-group text-right m-b-0">
                     <button class="btn btn-gradient waves-effect waves-light" type="submit">
                         Thay đổi thông tin

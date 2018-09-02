@@ -64,7 +64,8 @@ class AdminController extends Controller
             'twitter' => DB::table('settings')->where('key','=','twitter')->value('value'),
             'github' => DB::table('settings')->where('key','=','github')->value('value'),
             'facebook' => DB::table('settings')->where('key','=','facebook')->value('value'),
-            'linkedin' => DB::table('settings')->where('key','=','linkedin')->value('value')
+            'linkedin' => DB::table('settings')->where('key','=','linkedin')->value('value'),
+            'mail' => DB::table('settings')->where('key','=','mail')->value('value')
         ];
         return view('admin.setting')->with('setting',$setting);
     }
@@ -106,6 +107,10 @@ class AdminController extends Controller
         if ($request->has('txtLinkedIn')) {
             DB::table('settings')->where('key','linkedin')->update(['value' => $request->txtLinkedIn]);
         }
+        if ($request->has('txtMail')) {
+            DB::table('settings')->where('key','mail')->update(['value' => $request->txtMail]);
+        }
+
         return redirect('admin/setting')->with('success','Bạn đã sửa thành công!')->withInput();
     }
 }
